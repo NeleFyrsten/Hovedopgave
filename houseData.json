@@ -1,0 +1,78 @@
+{
+    "heroSection": {
+        "imageID": {
+            "1": "./images/House/livingRoom.png",
+            "2": "./images/House/SittingRoom.png",
+            "3": "./images/House/Boat.png",
+            "4": "./images/House/Bedroom1.png",
+            "5": "./images/House/Kitchen.png"
+        },
+        "hardFacts": "hel bolig | 8 gæster | 3 soveværelser | 2 ekstra senge | kæledyr velkomne | 800m til stranden"
+    },
+
+    "Prices": {
+        "pricePerNight": "600",
+        "cleaning": "600"
+    },
+
+    "Services":[
+         {
+            "ServiceID": "1",
+            "image": "./images/Other/wood.jpg",
+            "Title": "Brænde",
+            "descriptionShort": "Nok til at fylde ovnen 5 gange",
+            "descriptionLong": "Nok til at fylde ovnen 5 gange<br><br>Bestil en brænde starterpack, så ovnen er klar til atblive tœndt, så snart du ankommer.",
+            "price": "100 kr"
+        },
+
+        {
+            "ServiceID": "2",
+            "image": "./images/Other/bedding.jpg",
+            "Title": "Sengetøj",
+            "descriptionShort": "Inkl. stor badehåndklæde",
+            "descriptionLong": "Inkl. stor badehåndklæde<br><br>1 pudebetræk<br>1 dynebetræk<br>1 sengelage<br>2 lile håndklæder<br>1 stor håndklæde<br>1 badehåndklæde",
+            "price": "50 kr /<br>pers."
+        },
+
+        {
+            "ServiceID": "3",
+            "image": "./images/Other/wine.jpg",
+            "Title": "Vin",
+            "descriptionShort": "Valg mellem 3 forskellige vintyper",
+            "descriptionLong": "Valg mellem 3 forskellige vintyper<br>Du kan vælge mellem 2 slags hvidvin og 1 rødvin. Tryk knappen for at lære mere",
+            "price": "fra 100 kr /<br>pers."
+        }
+    ],
+
+ 
+     "Activities":[
+        {  
+            "activityID": "1",
+            "image": "./images/Other/Yoga.jpg",
+            "Title": "Yoga kursus",
+            "description": "Forkæl dig selv med et afslappende yogakursus på ferien. Nyd roen, find fornyet energi og kom hjem med en dyb indre balance.",
+            "time": "3 ledige tider indenfor din ferieperiode",
+            "location": "5 km fra ferieboligen",
+            "price": "150 kr / time"
+        },
+
+        {
+            "activityID": "2",
+            "image": "./images/Other/Sailing.jpg",
+            "Title": "Lej en sejlbåd",
+            "description": "Lej en sejlbåd og oplev ægte ferieidyl til søs. Nyd vinden i håret, roen fra havet og den ultimative frihed - helt i dit eget tempo.",
+            "time": "efter aftale",
+            "location": "tilbud fra udlejeren - 0 km",
+            "price": "1000 kr / dag"
+        },
+
+        {
+            "image": "./images/Other/Ridning.jpg",
+            "Title": "Ponyridning til børn",
+            "description": "Lad dit barn opleve glæden ved ponyridning i rolige og sikre omgivelser. En skøn ferieaktivitet, der kombinerer frisk luft, dyrekontakt og masser af smil.",
+            "time": "efter aftale",
+            "location": "2 km fra ferieboligen",
+            "price": "200 kr / time"
+        }
+    ]
+}
