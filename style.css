@@ -143,7 +143,46 @@ a {
                 
 }
 
+.selectBox {
+    position: relative;
+
+    .selectBox__container {
+        display: none;
+        &.selectBox--active {
+            display: block;
+        }
+
+        position: absolute;
+        top: calc(100% + 5px);
+        z-index: 100;
+        width: 100%;
+        left: 0;
+        
+        box-sizing: border-box;
+        padding-inline: var(--spacing__24);
+        padding-block: var(--spacing__16);
+        border: solid 1px var(--Border__primary);
+        border-radius: 8px;
+        
+
+        background-color: var(--Container__primary);
+        color: var(--Text__primary);
+        
+        .selectBox__category {
+            display: flex;
+            justify-content: space-between;
+            padding-block: var(--spacing__20);
+            border-bottom: solid 1px #cbcbcb;
+        }
+        /* last child is the last element -> no border necessary */
+        :last-child {
+            border: none;
+        }
+    }
+}
+
 .input__select {
+    position: relative;
     padding-inline: var(--spacing__16);
     padding-block: var(--spacing__8);
     height: fit-content;
@@ -190,33 +229,6 @@ a {
     }
 }
 
-.searchParameters__chooseGuests {
-    display: none;
-    width: calc(100% - 48px - 80px);
-    background-color: var(--Container__primary);
-    border: solid 1px var(--Border__primary);
-    color: var(--Text__primary);
-    padding-inline: var(--spacing__24);
-    padding-block: var(--spacing__16);
-    margin-inline: var(--spacing__40);
-    
-    position: absolute;
-    top: 104px;
-    left: 0;
-    
-    .chooseGuests__category {
-        display: flex;
-        justify-content: space-between;
-        padding-block: var(--spacing__20);
-        border-bottom: solid 1px #cbcbcb;
-
-    }
-    /* last child is the last element -> no border necessary */
-    :last-child {
-        border: none;
-    }
-}
-
 .navBar {
     width: 64px;
     height: 100%;
@@ -251,8 +263,7 @@ a {
                 }
 
                 &:hover {
-                    fill: var(--Border__primary);
-                    stroke: none;
+                    stroke: var(--Border__primary);
                 }
             }
         }
@@ -284,7 +295,23 @@ a {
         .priceBar__priceItem {
             padding-inline: var(--spacing__12);
             display: flex;
-            justify-content: space-between;
+
+            &.priceBar__services--empty {
+                display: none;
+
+                &.--active {
+                    display: flex;
+                }
+            }
+
+            .priceItem--remove {
+                margin-right: 16px;
+                cursor: pointer;
+            }
+
+            .priceItem--calculation {
+                margin-left: auto;
+            }
         }
     }
 
