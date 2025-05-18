@@ -11,36 +11,44 @@
 </head>
 <body>
     <nav class="navBar">
-        <img class="navBar__logo icon--menu" src="./images/Logo.svg" alt="">
-        <section class="navBar__mainPages">
-            <section class="mainPages__item mainPages__item--houses">
-                <img class="icon--menu" src="./images/Icons/icon_house.svg" alt="">
-            </section>
-            <section class="mainPages__item mainPages__item--area">
-                <img class="icon--menu" src="./images/Icons/icon__map.svg" alt="">
+        <section class="navBar__group">
+            <section class="navBar__item">
+                <img class="icon--menu navBar__logo" src="./images/Logo.svg" alt="">
             </section>
         </section>
-        <section class="navBar__profile">
-            <img class="icon--menu --dark" src="./images/Icons/icon__bookmark.svg" alt="">
-            <img class="icon--menu --dark" src="./images/Icons/icon_account.svg" alt="">
+        <section class="navBar__group">
+            <section class="navBar__item mainPages__item--houses">
+                <svg class="icon--menu icon--active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                     viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <path d="M62.79,29.172l-28-28C34.009,0.391,32.985,0,31.962,0s-2.047,0.391-2.828,1.172l-28,28
+                        c-1.562,1.566-1.484,4.016,0.078,5.578c1.566,1.57,3.855,1.801,5.422,0.234L8,33.617V60c0,2.211,1.789,4,4,4h16V48h8v16h16
+                        c2.211,0,4-1.789,4-4V33.695l1.195,1.195c1.562,1.562,3.949,1.422,5.516-0.141C64.274,33.188,64.356,30.734,62.79,29.172z"/>
+                </svg>
+            </section>
+            <section class="navBar__item mainPages__item--area">
+                <svg class="icon--menu" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.43627 5.14686C2 5.64345 2 6.49488 2 8.19773V17.591C2 18.797 2 19.4 2.3146 19.854C2.62919 20.3079 3.17921 20.4986 4.27924 20.88L5.57343 21.3286C6.27436 21.5717 6.81371 21.7586 7.26633 21.879C7.5616 21.9576 7.83333 21.7258 7.83333 21.4203V6.2701C7.83333 6.02118 7.64964 5.81111 7.40837 5.74991C7.01914 5.65118 6.55127 5.48897 5.91002 5.26666C4.35676 4.72817 3.58014 4.45893 2.98922 4.73235C2.77941 4.82942 2.59116 4.97054 2.43627 5.14686Z"/>
+                    <path d="M12.6204 3.48096L11.0844 4.54596C10.5287 4.93124 10.1215 5.2136 9.77375 5.41491C9.60895 5.51032 9.5 5.68291 9.5 5.87334V20.9203C9.5 21.2909 9.88398 21.5222 10.1962 21.3225C10.5312 21.1082 10.9149 20.8422 11.3796 20.5199L12.9156 19.4549C13.4712 19.0697 13.8785 18.7873 14.2262 18.586C14.3911 18.4906 14.5 18.318 14.5 18.1276V3.08063C14.5 2.71004 14.116 2.47866 13.8038 2.67836C13.4688 2.89271 13.0851 3.15874 12.6204 3.48096Z"/>
+                    <path d="M19.7208 3.12093L18.4266 2.67226C17.7256 2.42923 17.1863 2.24228 16.7337 2.12187C16.4384 2.04333 16.1667 2.2751 16.1667 2.58064V17.7308C16.1667 17.9797 16.3504 18.1898 16.5916 18.251C16.9809 18.3497 17.4488 18.5119 18.09 18.7342C19.6432 19.2727 20.4199 19.542 21.0108 19.2686C21.2206 19.1715 21.4088 19.0304 21.5637 18.854C22 18.3575 22 17.506 22 15.8032V6.40988C22 5.2039 22 4.60091 21.6854 4.14695C21.3708 3.69298 20.8208 3.5023 19.7208 3.12093Z"/>
+                </svg>
+            </section>
+        </section>
+        <section class="navBar__group">
+            <section class="navBar__item">
+                <svg class="icon--menu" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.07989 3 8.2 3H15.8C16.9201 3 17.4802 3 17.908 3.21799C18.2843 3.40973 18.5903 3.71569 18.782 4.09202C19 4.51984 19 5.07989 19 6.2V21L12 16L5 21V6.2Z" >
+                </svg>
+            </section>
+            <section class="navBar__item">
+                <svg class="icon--menu" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.19141 25.8459L7.29922 28.8001L11.576 30.7693L16.4992 31.6001L21.4222 30.7693L25.6992 28.8001L28.8068 25.8462C19.3898 18.935 7.65499 22.9653 4.19141 25.8459Z"/>
+                    <path d="M16.4995 18.4615C19.8982 18.4615 22.6534 15.7063 22.6534 12.3077C22.6534 8.90898 19.8982 6.15381 16.4995 6.15381C13.1009 6.15381 10.3457 8.90898 10.3457 12.3077C10.3457 15.7063 13.1009 18.4615 16.4995 18.4615Z"/>
+                    <circle cx="16.5" cy="16" r="15"/>
+                </svg>                
+            </section>
         </section>
     </nav>
-    
-    <section class="heroSection">
-        <!-- images will be saved in a JSON file -->
-        <section class="heroSection__images">
-            <img class="heroSection__image --1" data-imageID="1" src="./images/House/livingRoom.png" alt="">
-            <img class="heroSection__image --2" data-imageID="2" src="./images/House/SittingRoom.png" alt="">
-            <img class="heroSection__image --3" data-imageID="3" src="./images/House/Boat.png" alt="">
-            <img class="heroSection__image --4" data-imageID="4" src="./images/House/Bedroom1.png" alt="">
-            <img class="heroSection__image --5" data-imageID="5" src="./images/House/Kitchen.png" alt="">
-        </section>
-        <h1 class="heroSection__title">Oase ved det dankse hav</h1>
-        <p class="heroSection__hardFacts">hel bolig | 8 gæster | 3 soveværelser | 2 ekstra senge | 
-            kæledyr velkomne | 800m til stranden</p>
-        <button class="button button__primary --big">se billeder</button>
-    </section>
-    
+
     <section class="priceBar">
         <section class="priceBar__searchParameters searchParameters">
             <!-- <select name="guests" id="guests" aria-placeholder="Tilføj gæster">
@@ -136,171 +144,193 @@
         </h2>
         <button class="button button__primary --XL">Book nu</button>
     </section>
-    <section class="houseComponent houseComponent__services" id="house__services"> 
-        <!-- id only to anable scrolling to the element when clicking .priceBar__showServices -->
-        <section class="houseComponent__heading">
-            <h2>Ekstras</h2>
-            <p>Tilkøb tjenester, der er tilknyttet huset.</p>
+
+    <section class="mainSection">
+        <section class="heroSection">
+            <!-- images will be saved in a JSON file -->
+            <section class="heroSection__images">
+                <img class="heroSection__image --1" data-imageID="1" src="./images/House/livingRoom.png" alt="">
+                <img class="heroSection__image --2" data-imageID="2" src="./images/House/SittingRoom.png" alt="">
+                <img class="heroSection__image --3" data-imageID="3" src="./images/House/Boat.png" alt="">
+                <img class="heroSection__image --4" data-imageID="4" src="./images/House/Bedroom1.png" alt="">
+                <img class="heroSection__image --5" data-imageID="5" src="./images/House/Kitchen.png" alt="">
+            </section>
+            <h1 class="heroSection__title">Oase ved det dankse hav</h1>
+            <p class="heroSection__hardFacts">hel bolig | 8 gæster | 3 soveværelser | 2 ekstra senge | 
+                kæledyr velkomne | 800m til stranden</p>
+            <button class="button button__primary --big">se billeder</button>
         </section>
-        <section class="services__items">
-            <section class="card card__service">
-                <!-- all content from JSON file, I hardcode this to style it -->
-                <img class="card__image" src="./images/Other/wood.jpg" alt="">
-                <section class="card__text">
-                    <h3>Brænde</h3>
-                    <p class="p--small">Nok til at fylde ovnen 5 gange</p>
-                    <!-- text must be replaced when hovering -->
-                </section>
-                <section class="card__price --service">
-                    <p class="p--small"><b>100kr</b></p>
-                    <button class="button button__primary --small">tilføj</button>
+        
+        <section class="houseComponent houseComponent__services" id="house__services"> 
+            <!-- id only to anable scrolling to the element when clicking .priceBar__showServices -->
+            <section class="houseComponent__heading">
+                <h2>Ekstras</h2>
+                <p>Tilkøb tjenester, der er tilknyttet huset.</p>
+            </section>
+            <section class="service__items__line">
+                <section class="services__items">
+                    <section class="card card__service">
+                        <!-- all content from JSON file, I hardcode this to style it -->
+                        <img class="card__image" src="./images/Other/wood.jpg" alt="">
+                        <section class="card__text">
+                            <h3>Brænde</h3>
+                            <p class="p--small">Nok til at fylde ovnen 5 gange</p>
+                            <p class="card__text__long p--small">Buche ein Paket Holz und genieße den Ofen, sobald du ankommst.</p>
+                            <!-- text must be replaced when hovering -->
+                        </section>
+                        <section class="card__price --service">
+                            <p class="p--small"><b>100kr</b></p>
+                            <button class="button button__primary --small">tilføj</button>
+                        </section>
+                    </section>
+                    <section class="card card__service">
+                        <!-- all content from JSON file, I hardcode this to style it -->
+                        <img class="card__image" src="./images/Other/bedding.jpg" alt="">
+                        <section class="card__text">
+                            <h3>Sengetøj</h3>
+                            <p class="p--small">Inkl. stor badehåndklæde</p>
+                            <!-- text must be replaced when hovering -->
+                        </section>
+                        <section class="card__price --service">
+                            <p class="p--small"><b>50kr /<br>pers.</b></p>
+                            <button class="button button__primary --small">tilføj</button>
+                        </section>
+                    </section>
+                    <section class="card card__service">
+                        <!-- all content from JSON file, I hardcode this to style it -->
+                        <img class="card__image" src="./images/Other/wine.jpg" alt="">
+                        <section class="card__text">
+                            <h3>Vin</h3>
+                            <p class="p--small">Valg mellem 3 forskellige vintyper</p>
+                            <!-- text must be replaced when hovering -->
+                        </section>
+                        <section class="card__price --service">
+                            <p class="p--small"><b>100kr /<br>flaske</b></p>
+                            <button class="button button__primary --small">se alt</button>
+                        </section>
+                    </section>
+                    <!-- pop-up for more than one option of a service -->
                 </section>
             </section>
-            <section class="card card__service">
-                <!-- all content from JSON file, I hardcode this to style it -->
-                <img class="card__image" src="./images/Other/bedding.jpg" alt="">
-                <section class="card__text">
-                    <h3>Sengetøj</h3>
-                    <p class="p--small">Inkl. stor badehåndklæde</p>
-                    <!-- text must be replaced when hovering -->
-                </section>
-                <section class="card__price --service">
-                    <p class="p--small"><b>50kr /<br>pers.</b></p>
-                    <button class="button button__primary --small">tilføj</button>
-                </section>
-            </section>
-            <section class="card card__service">
-                <!-- all content from JSON file, I hardcode this to style it -->
+            <article class="card card__service--multipleChoice">
+                <img class="icon icon__close" src="images/Icons/icon__close.svg" alt="">
                 <img class="card__image" src="./images/Other/wine.jpg" alt="">
-                <section class="card__text">
-                    <h3>Vin</h3>
-                    <p class="p--small">Valg mellem 3 forskellige vintyper</p>
-                    <!-- text must be replaced when hovering -->
-                </section>
-                <section class="card__price --service">
-                    <p class="p--small"><b>100kr /<br>flaske</b></p>
-                    <button class="button button__primary --small">se alt</button>
-                </section>
-            </section>
-            <!-- pop-up for more than one option of a service -->
-        </section>
-        <article class="card card__service--multipleChoice">
-            <img class="icon icon__close" src="images/Icons/icon__close.svg" alt="">
-            <img class="card__image" src="./images/Other/wine.jpg" alt="">
-            
-            <p class="p--small multipleChoice__description">Tilføj en vin, så den venter på dig, når du tjekker ind.
-                Du kan også altid bestille vin, når du er på stedet.</p>
-                <section class="multipleChoice__choice">
-                    <section class="choice__description">
-                        <h3>Rødvin fra Italien</h3>
-                        <p class="p--small">Fyldig og frugtig med noter af kirsebær og krydderier.</p>
+                
+                <p class="p--small multipleChoice__description">Tilføj en vin, så den venter på dig, når du tjekker ind.
+                    Du kan også altid bestille vin, når du er på stedet.</p>
+                    <section class="multipleChoice__choice">
+                        <section class="choice__description">
+                            <h3>Rødvin fra Italien</h3>
+                            <p class="p--small">Fyldig og frugtig med noter af kirsebær og krydderier.</p>
+                        </section>
+                        <p class="p--small choice__price">100 kr / flaske</p>
+                        <section class="choice__quantity button__changeQuantity">
+                            <button class="button__quantity --decrease">-</button>
+                            <p class="p--small choice__number">0</p>
+                            <button class="button__quantity --increase">+</button>
+                        </section>
                     </section>
-                    <p class="p--small choice__price">100 kr / flaske</p>
-                    <section class="choice__quantity button__changeQuantity">
-                        <button class="button__quantity --decrease">-</button>
-                        <p class="p--small choice__number">0</p>
-                        <button class="button__quantity --increase">+</button>
+                    <section class="multipleChoice__choice">
+                        <section class="choice__description">
+                            <h3>Hvidvin fra lokalområdet</h3>
+                            <p class="p--small">Frisk og let med citrusnoter og en livlig afslutning.</p>
+                        </section>
+                        <p class="p--small choice__price">150 kr / flaske</p>
+                        <section class="choice__quantity button__changeQuantity">
+                            <button class="button__quantity --decrease">-</button>
+                            <p class="p--small choice__number">0</p>
+                            <button class="button__quantity --increase">+</button>
+                        </section>
                     </section>
-                </section>
-                <section class="multipleChoice__choice">
-                    <section class="choice__description">
-                        <h3>Hvidvin fra lokalområdet</h3>
-                        <p class="p--small">Frisk og let med citrusnoter og en livlig afslutning.</p>
+                    <section class="multipleChoice__choice">
+                        <section class="choice__description">
+                            <h3>Hvidvin fra Spanien</h3>
+                            <p class="p--small">Aromatisk og blød med tropiske frugter og en varm eftersmag.</p>
+                        </section>
+                        <p class="p--small choice__price">200 kr / flaske</p>
+                        <section class="choice__quantity button__changeQuantity">
+                            <button class="button__quantity --decrease">-</button>
+                            <p class="p--small choice__number">0</p>
+                            <button class="button__quantity --increase">+</button>
+                        </section>
                     </section>
-                    <p class="p--small choice__price">150 kr / flaske</p>
-                    <section class="choice__quantity button__changeQuantity">
-                        <button class="button__quantity --decrease">-</button>
-                        <p class="p--small choice__number">0</p>
-                        <button class="button__quantity --increase">+</button>
-                    </section>
-                </section>
-                <section class="multipleChoice__choice">
-                    <section class="choice__description">
-                        <h3>Hvidvin fra Spanien</h3>
-                        <p class="p--small">Aromatisk og blød med tropiske frugter og en varm eftersmag.</p>
-                    </section>
-                    <p class="p--small choice__price">200 kr / flaske</p>
-                    <section class="choice__quantity button__changeQuantity">
-                        <button class="button__quantity --decrease">-</button>
-                        <p class="p--small choice__number">0</p>
-                        <button class="button__quantity --increase">+</button>
-                    </section>
-                </section>
-                <h3 class="multipleChoice__price">0,00 kr</h3>
-                <button class="button button__primary --small">tilføj</button>  
-            </article>
-    </section>
-    <section class="houseComponent houseComponent__activities"> 
-        <!-- id only to anable scrolling to the element when clicking .priceBar__showServices -->
-        <section class="houseComponent__heading">
-            <h2>Aktiviteter</h2>
-            <p>Udforsk udlejerens favoritaktiviteter og anbefalinger.</p>
-        </section>
-        <button class="button button__primary button__activities">se alle aktiviteter</button>
-        <section class="services__items">
-            <section class="card card__activity">
-                <!-- all content from JSON file, I hardcode this to style it -->
-                <img class="card__image" src="./images/Other/Yoga.jpg" alt="">
-                <section class="card__text">
-                    <h3>Yoga kursus</h3>
-                    <p class="p--small">Forkæl dig selv med et afslappende yogakursus på ferien. Nyd roen, find fornyet energi og kom hjem med en dyb indre balance.</p>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
-                        <p class="p--small">3 ledige tider indenfor din ferieperiode</p>
-                    </section>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
-                        <p class="p--small">5 km fra ferieboligen</p>
-                    </section>
-                </section>
-                <section class="card__price --activity">
-                    <p class="p--small"><b>150kr / time</b></p>
-                    <button class="button button__primary --small">læs mere</button>
-                </section>
-            </section>
-           <section class="card card__activity">
-                <!-- all content from JSON file, I hardcode this to style it -->
-                <img class="card__image" src="./images/Other/Sailing.jpg" alt="">
-                <section class="card__text">
-                    <h3>Lej en sejlbåd</h3>
-                    <p class="p--small">Lej en sejlbåd og oplev ægte ferieidyl til søs. Nyd vinden i håret, roen fra havet og den ultimative frihed - helt i dit eget tempo.</p>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
-                        <p class="p--small">efter aftale</p>
-                    </section>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
-                        <p class="p--small">tilbud fra udlejeren</p>
-                    </section>
-                </section>
-                <section class="card__price --activity">
-                    <p class="p--small"><b>1000kr / dag</b></p>
-                    <button class="button button__primary --small">læs mere</button>
-                </section>
-            </section>
-            <section class="card card__activity">
-                <!-- all content from JSON file, I hardcode this to style it -->
-                <img class="card__image" src="./images/Other/Ridning.jpg" alt="">
-                <section class="card__text">
-                    <h3>Ponyridning til børn</h3>
-                    <p class="p--small">Lad dit barn opleve glæden ved ponyridning i rolige og sikre omgivelser. En skøn ferieaktivitet, der kombinerer frisk luft, dyrekontakt og masser af smil.</p>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
-                        <p class="p--small">efter aftale</p>
-                    </section>
-                    <section class="card__fact">
-                        <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
-                        <p class="p--small">2 km fra ferieboligen</p>
-                    </section>
-                </section>
-                <section class="card__price --activity">
-                    <p class="p--small"><b>200kr / time</b></p>
-                    <button class="button button__primary --small">læs mere</button>
-                </section>
-            </section>
+                    <h3 class="multipleChoice__price">0,00 kr</h3>
+                    <button class="button button__primary --small">tilføj</button>  
+                </article>
         </section>
 
+        <section class="houseComponent houseComponent__activities"> 
+            <!-- id only to anable scrolling to the element when clicking .priceBar__showServices -->
+            <section class="houseComponent__heading">
+                <h2>Aktiviteter</h2>
+                <p>Udforsk udlejerens favoritaktiviteter og anbefalinger.</p>
+            </section>
+            <button class="button button__primary button__activities">se alle aktiviteter</button>
+            <section class="services__items">
+                <section class="card card__activity">
+                    <!-- all content from JSON file, I hardcode this to style it -->
+                    <img class="card__image" src="./images/Other/Yoga.jpg" alt="">
+                    <section class="card__text">
+                        <h3>Yoga kursus</h3>
+                        <p class="p--small">Forkæl dig selv med et afslappende yogakursus på ferien. Nyd roen, find fornyet energi og kom hjem med en dyb indre balance.</p>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
+                            <p class="p--small">3 ledige tider indenfor din ferieperiode</p>
+                        </section>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
+                            <p class="p--small">5 km fra ferieboligen</p>
+                        </section>
+                    </section>
+                    <section class="card__price --activity">
+                        <p class="p--small"><b>150kr / time</b></p>
+                        <button class="button button__primary --small">læs mere</button>
+                    </section>
+                </section>
+               <section class="card card__activity">
+                    <!-- all content from JSON file, I hardcode this to style it -->
+                    <img class="card__image" src="./images/Other/Sailing.jpg" alt="">
+                    <section class="card__text">
+                        <h3>Lej en sejlbåd</h3>
+                        <p class="p--small">Lej en sejlbåd og oplev ægte ferieidyl til søs. Nyd vinden i håret, roen fra havet og den ultimative frihed - helt i dit eget tempo.</p>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
+                            <p class="p--small">efter aftale</p>
+                        </section>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
+                            <p class="p--small">tilbud fra udlejeren</p>
+                        </section>
+                    </section>
+                    <section class="card__price --activity">
+                        <p class="p--small"><b>1000kr / dag</b></p>
+                        <button class="button button__primary --small">læs mere</button>
+                    </section>
+                </section>
+                <section class="card card__activity">
+                    <!-- all content from JSON file, I hardcode this to style it -->
+                    <img class="card__image" src="./images/Other/Ridning.jpg" alt="">
+                    <section class="card__text">
+                        <h3>Ponyridning til børn</h3>
+                        <p class="p--small">Lad dit barn opleve glæden ved ponyridning i rolige og sikre omgivelser. En skøn ferieaktivitet, der kombinerer frisk luft, dyrekontakt og masser af smil.</p>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon_calendar.svg" alt="">
+                            <p class="p--small">efter aftale</p>
+                        </section>
+                        <section class="card__fact">
+                            <img class="icon icon--card" src="./images/Icons/icon__location.svg" alt="">
+                            <p class="p--small">2 km fra ferieboligen</p>
+                        </section>
+                    </section>
+                    <section class="card__price --activity">
+                        <p class="p--small"><b>200kr / time</b></p>
+                        <button class="button button__primary --small">læs mere</button>
+                    </section>
+                </section>
+            </section>
+        </section>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>

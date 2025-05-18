@@ -23,7 +23,6 @@ function addData(data) {
     /** 1. get the right elements from dom
      * 2. get the right data from json
      */
-debugger
     console.log(data.heroSection)
     //IMAGES
     //looking for the imageID of the hero images

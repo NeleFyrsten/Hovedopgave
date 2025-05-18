@@ -95,6 +95,8 @@ a {
     font-size: 20px;
     color: var(--Text__primary);
 
+    cursor: pointer;
+
     &.button__primary {
         background-color: var(--Container__button--primary);
         border: solid 1px var(--Border__button);
@@ -172,6 +174,14 @@ a {
         gap: var(--spacing__12);
         width: 100%;
 
+        .input__select {
+            width: 30%;
+
+            .placeholder {
+                white-space: nowrap;
+            }
+        }
+
         .checkIn__binding {
             width: 12px;
             height: 1px;
@@ -216,12 +226,80 @@ a {
     align-items: center;
     position: fixed;
     z-index: 1;
-    padding-block: var(--spacing__40);
     -webkit-box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.15); 
     box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.15);
 
-    .icon--menu {
-        width: 32px;
+    .navBar__group {
+        position: relative;
+        width: 100%;
+        .navBar__item {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            justify-content: center;
+
+            .icon--menu {
+                width: 60%;
+
+                stroke: var(--Container__accent); 
+                stroke-width: 2;
+                stroke-linejoin: round;
+                fill: none;
+
+                &.icon--active {
+                    fill: var(--Border__primary);
+                    stroke: none;
+                }
+
+                &:hover {
+                    fill: var(--Border__primary);
+                    stroke: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+.priceBar {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-inline: var(--spacing__40);
+    padding-block: var(--spacing__64);
+    box-sizing: border-box;
+    background-color: var(--Container__accent);
+    color: var(--Text__secondary);
+
+
+    .priceBar__fixedPrice, .priceBar__services {
+        padding-block: var(--spacing__28);
+        border-bottom: solid 1px var(--Divider__onDark);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing__16);
+
+        .priceBar__priceItem {
+            padding-inline: var(--spacing__12);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .priceBar__totalPrice {
+        text-align: right;
+        padding-block: var(--spacing__28);
+        margin-block-start: 3px;
+        margin-block-end: var(--spacing__16);
+
+        border-top: solid 1px var(--Divider__onDark);
+        font-weight: 600;
     }
 }
 
@@ -229,14 +307,19 @@ a {
 /*                  HOUSE PAGE                  */
 /* ____________________________________________ */
 
+.mainSection {
+    width: calc(70% - 64px - 32px);
+    margin-inline-start: calc(64px + var(--spacing__16));
+    margin-inline-end: var(--spacing__16);
+}
+
 .heroSection {
-    width: calc(70% - 64px - 32px - 11px);
     /* priceBar is 30%, menu 64px, margin inline 16px */
     height: fit-content;
     min-height: 850px;
-    margin-inline-start: calc(64px + var(--spacing__16));
-    margin-inline-end: var(--spacing__16);
+    
     padding-block: var(--spacing__64);
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -281,64 +364,27 @@ a {
     }
 }
 
-.priceBar {
-    width: 30%;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    padding-inline: var(--spacing__40);
-    padding-block: var(--spacing__64);
-    box-sizing: border-box;
-    background-color: var(--Container__accent);
-    color: var(--Text__secondary);
-
-
-    .priceBar__fixedPrice, .priceBar__services {
-        padding-block: var(--spacing__28);
-        border-bottom: solid 1px var(--Divider__onDark);
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing__16);
-
-        .priceBar__priceItem {
-            padding-inline: var(--spacing__12);
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-
-    .button {
-        width: 100%;
-    }
-
-    .priceBar__totalPrice {
-        text-align: right;
-        padding-block: var(--spacing__28);
-        margin-block-start: 3px;
-        margin-block-end: var(--spacing__16);
-
-        border-top: solid 1px var(--Divider__onDark);
-        font-weight: 600;
-    }
-}
-
 .houseComponent {
-    width: calc(70% - 64px - 32px - 11px);
-    margin-inline-start: var(--spacing__80);
-    margin-inline-end: var(--spacing__16);
-    padding-inline: var(--spacing__16);
     padding-block: var(--spacing__64);
-    box-sizing: border-box;
     border-bottom: solid 2px var(--Border__primary);
 
+    .service__items__line {
+        height: 15vw;
+        
+        .services__items {
+            height: 1px;
+            padding-top: 7.5vw;
+        }
+    }
     .services__items {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        gap: var(--spacing__20);
+        flex-wrap: wrap;
+        gap: 2rem;
         margin-block-start: var(--spacing__48);
     }
+
 
     .button__activities {
         margin-block-start: var(--spacing__24);
@@ -350,6 +396,7 @@ a {
 /* ____________________________________________*/
 
 .card {
+    flex: 1 1 30%;
     border: solid 2px var(--Border__primary);
     position: relative;
     background-color: #FFFFFF;
@@ -366,7 +413,6 @@ a {
         display: flex;
         flex-direction: column;
         gap: var(--spacing__12);
-
     }
 
     .card__price {
@@ -383,16 +429,23 @@ a {
     /* specifications service card */
 
     &.card__service {
-        width: 100%; 
-        aspect-ratio: 1.4;
+        min-height: 15vw;
+        height: fit-content;
+        max-height: 15vw;
+        translate: 0 -50%;
+        overflow: hidden;
         
         .card__image {
-            height: 50%;
+            height: 7.5vw;
         }
 
         .card__text {
-            width: 70%;
+            width: 65%;
             box-sizing: border-box;
+
+            .card__text__long {
+                display: none;
+            }
         }
 
         .card__price {
@@ -402,7 +455,7 @@ a {
             gap: var(--spacing__16);
             
             width: 35%;
-            height: 60%;
+            height: 16vh;
             padding-inline: var(--spacing__12);
             box-sizing: border-box;
             position: absolute;
@@ -416,25 +469,23 @@ a {
         }
 
         &:hover {
-            scale: 1.2;
-            height: fit-content;
-            z-index: 1;
-            -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.25); 
-            box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.25);
-            transition: linear 0.1s;
-            /* TEXT FRA JSON, SKAL STYLES SENERE */
+            max-height: 50vh;
+            transition: max-height linear 0.1s;
+
+            .card__text__long {
+                display: block;
+            }
         }
     }
 
     /* specifications activity card */
 
     &.card__activity {
-        width: 100%;
-        aspect-ratio: 0.7;
-        position: relative;
+        display: flex;
+        flex-direction: column;
 
         .card__image {
-            height: 30%;
+            height: 7.5vw;
         }
 
         .icon {
@@ -444,13 +495,11 @@ a {
         .card__price {
             width: 100%;
             box-sizing: border-box;
+            margin-top: auto;
             padding-inline: var(--spacing__16);
             padding-block: var(--spacing__16);
             align-items: center;
             justify-content: space-between;
-            
-            position: absolute;
-            bottom: 0;
 
             border-top: solid 2px var(--Border__primary);
         }
