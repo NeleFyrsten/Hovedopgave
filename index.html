@@ -53,7 +53,7 @@
                 <option value="" disabled selected hidden>Tilføj gæster</option>
             </select> -->
             <section class="selectBox">
-                <section class="searchParameters__house--guests input__select " onclick="toggleOpenChooseGuests('searchParameters__chooseGuests')">
+                <section class="searchParameters__house--guests input__select " onclick="toggleOpenSelectBox('searchParameters__chooseGuests')">
                     <p class="placeholder">Tilføj gæster</p>
                     <img class="icon" src="./images/Icons/icon_dropdown.svg" alt="">
                 </section>
@@ -62,13 +62,13 @@
                         <p class="p--small">Voksne</p>
                         <section class="chooseGuests__adults choice__quantity button__changeQuantity">
                             <button class="button__quantity --decrease">-</button>
-                            <p class="p--small choice__number">0</p>
+                            <p class="p--small choice__number" min="1">1</p>
                             <button class="button__quantity --increase">+</button>
                         </section>
                     </section>
                     <section class="selectBox__category">
                         <p class="p--small">Børn (5-16)</p>
-                        <section class="chooseGuests__childs choice__quantity button__changeQuantity">
+                        <section class="chooseGuests__children choice__quantity button__changeQuantity">
                             <button class="button__quantity --decrease">-</button>
                             <p class="p--small choice__number">0</p>
                             <button class="button__quantity --increase">+</button>
@@ -113,7 +113,7 @@
                 </p>
                 <p class="p--small priceItem--calculation">
                     <!-- data from JSON file -->
-                     8.400
+                     8400
                 </p>
             </section>
             <section class="priceBar__priceItem">
@@ -135,7 +135,7 @@
                     ingen tilkøb
                     <!-- data from JSON file -->
                 </p>
-                <a class="priceItem--calculation priceBar__showServices" href="#house__services">vis alle tjenester</a>
+                <a class="priceItem--placeholder" href="#house__services">vis alle tjenester</a>
             </section>
         </section>
         <h2 class="priceBar__totalPrice">
@@ -180,7 +180,7 @@
                         </section>
                         <section class="card__price --service">
                             <p class="p--small"><b>100kr</b></p>
-                            <button class="button button__primary --small" onclick="addService('Brænde', '100kr')">tilføj</button>
+                            <button class="button button__primary --small" onclick="addService('Brænde', 100)">tilføj</button>
                         </section>
                     </section>
                     <section class="card card__service">
@@ -193,7 +193,7 @@
                         </section>
                         <section class="card__price --service">
                             <p class="p--small"><b>50kr /<br>pers.</b></p>
-                            <button class="button button__primary --small" onclick="addService('Sengetøj', '50kr')">tilføj</button>
+                            <button class="button button__primary --small" onclick="addService('Sengetøj', 50, ['adults', 'children'])">tilføj</button>
                         </section>
                     </section>
                     <section class="card card__service">
@@ -206,7 +206,7 @@
                         </section>
                         <section class="card__price --service">
                             <p class="p--small"><b>100kr /<br>flaske</b></p>
-                            <button class="button button__primary --small" onclick="addService('Vin', '100kr')">se alt</button>
+                            <button class="button button__primary --small" onclick="addService('Vin', 100, ['adults'])">se alt</button>
                         </section>
                     </section>
                     <!-- pop-up for more than one option of a service -->

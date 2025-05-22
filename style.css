@@ -123,7 +123,6 @@ a {
         display: flex;
         align-items: center;
         gap: var(--spacing__8);
-        color: var(--Text__primary);
         font-weight: 500;
 
         .button__quantity {
@@ -139,6 +138,7 @@ a {
             border: solid 1px var(--Border__button);
             background-color: var(--Container__button--primary);
             font-size: 14px;
+            cursor: pointer;
         }
                 
 }
@@ -148,7 +148,7 @@ a {
 
     .selectBox__container {
         display: none;
-        &.selectBox--active {
+        &.--active {
             display: block;
         }
 
@@ -256,6 +256,7 @@ a {
                 stroke-width: 2;
                 stroke-linejoin: round;
                 fill: none;
+                cursor: pointer;
 
                 &.icon--active {
                     fill: var(--Border__primary);
@@ -304,16 +305,34 @@ a {
                 }
             }
 
-            .priceItem--remove {
-                margin-right: 16px;
-                cursor: pointer;
-            }
-
-            .priceItem--calculation {
+            .priceItem--placeholder {
                 margin-left: auto;
             }
         }
     }
+
+    .priceBar__fixedPrice {
+        .priceItem--calculation {
+            margin-left: auto
+        }
+    }
+
+    .priceBar__services {
+        .button__changeQuantity {
+            margin-left: auto;
+        }
+
+        .priceItem--calculation {
+            width: 50px;
+            text-align: right;
+        }
+
+        .priceItem--remove {
+            margin-right: 16px;
+            cursor: pointer;
+        }
+    }
+
 
     .button {
         width: 100%;
